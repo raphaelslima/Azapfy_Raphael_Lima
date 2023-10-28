@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 
 import './globals.css';
-import Header from '@/components/Header';
 
 import { cn } from '@/lib/utils';
 
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(roboto.className, 'bg-zinc-900 text-zinc-100')}>
-        <Header />
         {children}
       </body>
     </html>
