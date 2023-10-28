@@ -3,6 +3,8 @@ import { Roboto } from 'next/font/google';
 
 import './globals.css';
 
+import { CombatHeroesProvider } from '@/context/combatHeroes';
+
 import { cn } from '@/lib/utils';
 
 const roboto = Roboto({
@@ -23,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(roboto.className, 'bg-zinc-900 text-zinc-100')}>
-        {children}
+        <CombatHeroesProvider>{children}</CombatHeroesProvider>
       </body>
     </html>
   );

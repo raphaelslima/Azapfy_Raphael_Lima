@@ -5,19 +5,22 @@ import Hero from '@/types/Hero';
 
 type Props = {
   hero: Hero;
+  combatHeroes: boolean;
 };
 
-const CardHero = ({ hero }: Props) => {
+const CardHero = ({ hero, combatHeroes }: Props) => {
   return (
     <Link href={`/hero/${hero.id}`}>
-      <div className="w-full flex flex-col justify-center items-center gap-2">
+      <div className={`w-full flex flex-col justify-center items-center gap-2`}>
         <div>
           <Image
             src={hero.images.sm}
             alt={`Imagem do herói ${hero.name}`}
             width={80}
             height={80}
-            className="object-fill rounded-sm"
+            className={`object-fill rounded-sm ${
+              !combatHeroes ? 'border border-blue-500' : 'border border-red-500'
+            }`}
             priority
           />
         </div>
