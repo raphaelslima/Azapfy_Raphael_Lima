@@ -66,19 +66,33 @@ const ProfileHero = ({ id, heroes }: Props) => {
               <div className="mt-4 md:w-1/2 md:mt-0">
                 <h2 className="text-xl mb-2 text-center">Biografia:</h2>
                 <ul className="text-sm flex flex-col justify-center items-center gap-2">
-                  {hero.biography.firstAppearance && (
-                    <li>Primeira aparição: {hero.biography.firstAppearance}</li>
-                  )}
+                  {!hero.biography.firstAppearance ||
+                    (hero.biography.firstAppearance === '-' ? (
+                      false
+                    ) : (
+                      <li>
+                        Primeira aparição: {hero.biography.firstAppearance}
+                      </li>
+                    ))}
 
-                  {hero.biography.fullName && (
+                  {!hero.biography.fullName ||
+                  hero.biography.fullName === '-' ? (
+                    false
+                  ) : (
                     <li>Nome verdadeiro: {hero.biography.fullName}</li>
                   )}
 
-                  {hero.biography.placeOfBirth && (
+                  {!hero.biography.placeOfBirth ||
+                  hero.biography.placeOfBirth === '-' ? (
+                    false
+                  ) : (
                     <li>Nascido em: {hero.biography.placeOfBirth}</li>
                   )}
 
-                  {hero.biography.publisher && (
+                  {!hero.biography.publisher ||
+                  hero.biography.publisher === '-' ? (
+                    false
+                  ) : (
                     <li>Personagem de: {hero.biography.publisher}</li>
                   )}
                 </ul>
