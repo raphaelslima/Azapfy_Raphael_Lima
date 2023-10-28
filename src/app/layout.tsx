@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 
 import './globals.css';
+import Header from '@/components/Header';
+
 import { cn } from '@/lib/utils';
 
 const roboto = Roboto({
@@ -22,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(roboto.className, 'bg-zinc-700 text-zinc-100')}>
+        <Header />
         {children}
       </body>
     </html>
