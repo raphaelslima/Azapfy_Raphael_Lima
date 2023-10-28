@@ -71,7 +71,7 @@ const ProfileHero = ({ id, heroes }: Props) => {
                   )}
 
                   {hero.biography.fullName && (
-                    <li>Nome verdadeiro:: {hero.biography.fullName}</li>
+                    <li>Nome verdadeiro: {hero.biography.fullName}</li>
                   )}
 
                   {hero.biography.placeOfBirth && (
