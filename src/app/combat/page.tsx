@@ -71,7 +71,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Combate:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[0].powerstats.combat >
+                        {heroesFighters[0].powerstats.combat >=
                         heroesFighters[1].powerstats.combat ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.combat}
@@ -86,7 +86,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Durabilidade:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[0].powerstats.durability >
+                        {heroesFighters[0].powerstats.durability >=
                         heroesFighters[1].powerstats.durability ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.durability}
@@ -101,7 +101,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Inteligência:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[0].powerstats.intelligence >
+                        {heroesFighters[0].powerstats.intelligence >=
                         heroesFighters[1].powerstats.intelligence ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.intelligence}
@@ -116,7 +116,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Poder:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[0].powerstats.power >
+                        {heroesFighters[0].powerstats.power >=
                         heroesFighters[1].powerstats.power ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.power}
@@ -131,7 +131,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Velocidade:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[0].powerstats.speed >
+                        {heroesFighters[0].powerstats.speed >=
                         heroesFighters[1].powerstats.speed ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.speed}
@@ -146,7 +146,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Estratégia:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[0].powerstats.strength >
+                        {heroesFighters[0].powerstats.strength >=
                         heroesFighters[1].powerstats.strength ? (
                           <span className="text-green-500">
                             {heroesFighters[0].powerstats.strength}
@@ -194,7 +194,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Combate:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[1].powerstats.combat >
+                        {heroesFighters[1].powerstats.combat >=
                         heroesFighters[0].powerstats.combat ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.combat}
@@ -209,7 +209,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Durabilidade:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[1].powerstats.durability >
+                        {heroesFighters[1].powerstats.durability >=
                         heroesFighters[0].powerstats.durability ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.durability}
@@ -224,7 +224,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Inteligência:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[1].powerstats.intelligence >
+                        {heroesFighters[1].powerstats.intelligence >=
                         heroesFighters[0].powerstats.intelligence ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.intelligence}
@@ -239,7 +239,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Poder:</p>
                       <div className="flex justify-center items-center">
-                        {heroesFighters[1].powerstats.power >
+                        {heroesFighters[1].powerstats.power >=
                         heroesFighters[0].powerstats.power ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.power}
@@ -254,7 +254,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Velocidade:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[1].powerstats.speed >
+                        {heroesFighters[1].powerstats.speed >=
                         heroesFighters[0].powerstats.speed ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.speed}
@@ -269,7 +269,7 @@ const HeroesCombat = () => {
                     <li className="w-full flex justify-between items-center">
                       <p>Estratégia:</p>
                       <div className=" flex justify-center items-center">
-                        {heroesFighters[1].powerstats.strength >
+                        {heroesFighters[1].powerstats.strength >=
                         heroesFighters[0].powerstats.strength ? (
                           <span className="text-green-500">
                             {heroesFighters[1].powerstats.strength}
