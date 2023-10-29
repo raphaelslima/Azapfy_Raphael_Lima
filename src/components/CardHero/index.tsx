@@ -10,7 +10,10 @@ type Props = {
 
 const CardHero = ({ hero, combatHeroes }: Props) => {
   return (
-    <Link href={`/hero/${hero.id}`}>
+    <Link
+      href={`/hero/${hero.id}`}
+      className={`${combatHeroes ? 'pointer-events-none' : ''}`}
+    >
       <div className={`w-full flex flex-col justify-center items-center gap-2`}>
         <div>
           <Image
