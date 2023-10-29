@@ -1,8 +1,10 @@
 'use client';
 
+import Link from 'next/link';
 import { useContext } from 'react';
 
 import { CombatHeroesContext } from '@/context/combatHeroes';
+import IconTrash from '@/Icons/IconTrash';
 
 import { Button } from '../ui/button';
 
@@ -23,9 +25,24 @@ const ShowCombatMode = () => {
             {heroesFighters[0] ? heroesFighters[0].name : '???'} VS{' '}
             {heroesFighters[1] ? heroesFighters[1].name : '???'}
           </h3>
-          <Button className="bg-red-500" onClick={() => setHeroesFighters([])}>
-            Limpar combate
-          </Button>
+          <div className="flex flex-row justify-center items-center gap-4">
+            <div className="flex flex-row justify-center items-center">
+              <Button
+                className="bg-red-500"
+                onClick={() => setHeroesFighters([])}
+              >
+                <IconTrash fontSize={18} className="mr-1" /> Limpar
+              </Button>
+            </div>
+
+            {heroesFighters.length >= 2 && (
+              <Link href={'/combat'}>
+                <Button className="bg-slate-200 text-black">
+                  Iniciar Combate
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
       )}
     </>
