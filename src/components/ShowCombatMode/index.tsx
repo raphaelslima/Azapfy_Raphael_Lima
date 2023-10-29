@@ -1,20 +1,14 @@
 'use client';
+
 import { useContext } from 'react';
 
 import { CombatHeroesContext } from '@/context/combatHeroes';
-import Hero from '@/types/Hero';
 
-import CardHero from '../CardHero';
 import { Button } from '../ui/button';
 
-type Props = {
-  heroes: Hero[];
-};
-
-const ShowHeroesCards = ({ heroes }: Props) => {
+const ShowCombatMode = () => {
   const { combatHeroes, heroesFighters, setHeroesFighters } =
     useContext(CombatHeroesContext);
-
   return (
     <>
       {!combatHeroes ? (
@@ -34,19 +28,8 @@ const ShowHeroesCards = ({ heroes }: Props) => {
           </Button>
         </div>
       )}
-      <div className="w-full mt-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-        {heroes.length > 0 ? (
-          heroes.map((hero) => (
-            <div key={hero.id} className="w-full mb-8">
-              <CardHero hero={hero} />
-            </div>
-          ))
-        ) : (
-          <span className="text-lg">Carregando...</span>
-        )}
-      </div>
     </>
   );
 };
 
-export default ShowHeroesCards;
+export default ShowCombatMode;
