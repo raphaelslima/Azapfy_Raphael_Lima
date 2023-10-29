@@ -17,8 +17,7 @@ const BtnsShowOrCombatMode = () => {
         Modo Exibição
       </Button>
       <Button
-        variant="destructive"
-        className="cursor-pointer"
+        className="bg-red-500 cursor-pointer"
         onClick={() => setCombatHeroes(true)}
       >
         Modo Combate

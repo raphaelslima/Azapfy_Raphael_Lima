@@ -34,12 +34,12 @@ const SearchHeroes = ({ heroes }: Props) => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center gap-4">
-      <div className="flex flex-row w-full max-w-sm items-center space-x-2">
+    <section className="w-full flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-row w-full max-w-sm items-center justify-between space-x-2">
         <Input
           type="text"
           placeholder="Pesquisar Herói"
-          className="text-zinc-900"
+          className="text-zinc-900 md:flex-grow"
           value={searchHero}
           onChange={(e) => setSearchHero(e.target.value)}
         />

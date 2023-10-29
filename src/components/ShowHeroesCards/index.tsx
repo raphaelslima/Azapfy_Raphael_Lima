@@ -15,14 +15,14 @@ const ShowHeroesCards = ({ heroes }: Props) => {
   return (
     <>
       {!combatHeroes ? (
-        <h2 className="text-lg mb-6">Modo Exibição</h2>
+        <h2 className="text-2xl mb-6 text-blue-500">Modo Exibição</h2>
       ) : (
-        <h2 className="text-lg mb-6">Modo Combate</h2>
+        <h2 className="text-2xl mb-6 text-red-500">Modo Combate</h2>
       )}
-      <div className="w-full grid grid-cols-2 md:grid-cols-4">
+      <div className="w-full mt-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         {heroes.length > 0 ? (
           heroes.map((hero) => (
-            <div key={hero.id} className="w-full mb-6">
+            <div key={hero.id} className="w-full mb-8">
               <CardHero hero={hero} combatHeroes={combatHeroes} />
             </div>
           ))

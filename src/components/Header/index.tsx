@@ -12,9 +12,9 @@ const Header = async () => {
   );
 
   return (
-    <header className="container max-w-screen-lg flex flex-col justify-center items-center gap-4 p-4">
+    <header className="container max-w-screen-lg flex flex-col justify-center items-center gap-4 p-4 mb-4">
       <Link href={'/'}>
-        <h1 className="text-center text-2xl">Jornada do Herói</h1>
+        <h1 className="text-center text-3xl lg:text-4xl">Jornada do Herói</h1>
       </Link>
       <SearchHeroes heroes={heroes} />
       <BtnsShowOrCombatMode />

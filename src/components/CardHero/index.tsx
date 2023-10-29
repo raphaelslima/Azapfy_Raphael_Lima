@@ -16,8 +16,8 @@ const CardHero = ({ hero, combatHeroes }: Props) => {
           <Image
             src={hero.images.sm}
             alt={`Imagem do herói ${hero.name}`}
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             className={`object-fill rounded-sm ${
               !combatHeroes ? 'border border-blue-500' : 'border border-red-500'
             }`}
