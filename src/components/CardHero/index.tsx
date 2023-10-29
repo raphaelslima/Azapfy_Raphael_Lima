@@ -18,7 +18,13 @@ const CardHero = ({ hero }: Props) => {
 
   const chooseHeroFighter = () => {
     if (!combatHeroes) return;
-    if (heroesFighters.length >= 2) return;
+    if (heroesFighters.length >= 2) {
+      const newArrayHero = [...heroesFighters];
+      newArrayHero.shift();
+      newArrayHero.push(hero);
+      setHeroesFighters(newArrayHero);
+      return;
+    }
     const newArrayHero = [...heroesFighters];
     newArrayHero.push(hero);
     setHeroesFighters(newArrayHero);
