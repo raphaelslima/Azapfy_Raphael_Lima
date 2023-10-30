@@ -14,7 +14,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Azapfy - Raphael Lima',
-  description: 'Teste tecníco'
+  description: 'Teste'
 };
 
 export default function RootLayout({
