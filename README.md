@@ -2,15 +2,9 @@
 
 ## Como rodar o projeto?
 
-### Local:
-
 1) No repositório baixar o projeto no botão "Code" e depois "Download ZIP".
 2) No VsCode executar o comando "npm i".
 3) No terminal executar o comando "npm run dev" e no navegador digitar "http://localhost:3000".
-
-### Deploy:
-
-Link:
 
 ## Tecnologias utilizadas:
 
