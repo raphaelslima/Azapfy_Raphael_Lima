@@ -5,7 +5,7 @@
 ### Local:
 
 1) No repositório baixar o projeto no botão "Code" e depois "Download ZIP".
-2) No VsCode pressionar executar o comando "npm i".
+2) No VsCode executar o comando "npm i".
 3) No terminal executar o comando "npm run dev" e no navegador digitar "http://localhost:3000".
 
 ### Deploy:
@@ -52,7 +52,7 @@ Link:
 
 ### Criação do layout:
 
-Para criar o layout do meu teste técnico me baseie no exemplo do documento do teste e acrescentei elementos e cores que favorecem uma melhor experiência do usuário que facilitam a compreensão do usuário em como a aplicação funciona. Exemplo: Verde se relaciona a vitória e vermelho se relaciona a combate ou derrota.
+Para criar o layout me baseie no exemplo do documento do teste e acrescentei elementos e cores que favorecem uma melhor experiência do usuário facilitando sua compreensão de como a aplicação funciona. Exemplo: Verde se relaciona a vitória e vermelho se relaciona a combate ou derrota.
 
 ### Desenvolvimento:
 
@@ -62,13 +62,13 @@ O segundo passo foi a configuração do Eslint e Prettier para padronizar do có
 
 O terceiro passo foi dividir a aplicação em componentes para tornar mais eficiente e organizado o seu desenvolvimento e mais fácil de dar manutenção futuramente, posteriormente analisei a relação entre os componentes e quais os estados que iriam para o contexto global da aplicação.
 
-O quarto passo foi a criação do elemento de exibição dos cards dos heróis, e a separação da aplicação em dois módulos o de exibição e o de combate, para isso criei dois botões em que o usuário pode selecionar o modulo e para tornar mais intuito as bordas dos cards dos heróis mudam de cor de acordo com a escolha do modulo. Para visualizar o perfil do herói basta clicar no botão de visualizar e para adicionar o herói no combate basta o usuário clicar na foto que o nome do personagem será exibido como um dos combatentes. Optei por fazer essa divisão para tornar menos complexo e ser mais intuitivo para o usuário o uso da aplicação. 
+O quarto passo foi a criação do elemento de exibição dos cards dos heróis, e a separação da aplicação em dois módulos, o de exibição e o de combate, para isso criei dois botões em que o usuário pode selecionar o modulo que deseja, para tornar mais intuitivo as bordas dos cards dos heróis mudam de cor de acordo com a escolha do modulo. Para visualizar o perfil do herói basta clicar no botão de visualizar e para adicionar o herói no combate basta o usuário clicar na foto que o nome do personagem será exibido como um dos combatentes. Optei por fazer essa divisão para tornar menos complexo e ser mais intuitivo para o usuário o uso da aplicação. 
 
 O quinto passo foi a criação do perfil do herói, para isso analisei as informações que o API fornece e escolhi as mais relevantes para serem exibidas para o usuário, optei por selecionar os status e a biografia.
 
-O sexto passo foi o desenvolvimento do filtro de busca, escolhi filtrar apenas pelo nome do personagem, o usuário digitando o nome assertivo do usuário ele irá para a página de perfil dele pressionado "Enter" ou clicando no botão de pesquisa, caso o usuário digite o nome errado e mostrado uma mensagem de erro sem apagar o campo de pesquisa para que ele veja o que errou. Como a API não tem um "GET ONE" criei um algoritmo que pelo nome do herói digitado é filtrado o id que é enviado como parâmetro e o id é usado como filtro para selecionar o herói que foi pesquisado.
+O sexto passo foi o desenvolvimento do filtro de busca, escolhi filtrar apenas pelo nome do personagem, o usuário digitando o nome do herói e pressionado "Enter" ou clicando no botão de pesquisa irá para a página de perfil desse personagem, caso o usuário digite o nome errado e mostrado uma mensagem de erro sem apagar o campo de pesquisa para que o usuário veja o que errou. Como a API não tem um "GET ONE" criei um algoritmo que pelo nome do herói digitado é filtrado o id que é enviado como parâmetro é usado como filtro em uma outra página para selecionar o herói que foi pesquisado no "GET ALL".
 
-O sétimo passo foi criação do modulo combate, quando o usuário entra nesse modulo um componente exibi os heróis selecionados, esses podem ser alterados antes do combate, um botão de "Limpar" que limpa os dois campos de heróis que irão combate e um botão de "Iniciar combate", quando o usuário clica nesse botão ele é redirecionado para uma página que aparece o resultado do combate e a comparação dos status dos personagens selecionados 
+O sétimo passo foi a criação do modulo combate, quando o usuário entra nesse modulo um componente exibi os heróis selecionados, esses podem ser alterados antes do combate, um botão de "Limpar" limpa os dois campos selecionados e um botão de "Iniciar combate", quando o usuário clica nesse botão ele é redirecionado para uma página que aparece o resultado do combate e a comparação dos status dos personagens selecionados 
 
 O último passo foi a criação da paginação no componente de exibição dos cards dos heróis, como a API não foi configurada para fazer a paginação na API com o limit, optei por fazer de forma manual com dois states que controlam o index dentro de um map do array de heróis vindos da API limitando em no máximo 10 os heróis que serão exibidos por vez.
 
