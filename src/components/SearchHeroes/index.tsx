@@ -17,6 +17,11 @@ const SearchHeroes = ({ heroes }: Props) => {
   const [searchHero, setSearchHero] = useState('');
   const [errorSearch, setErrorSearch] = useState('');
 
+  const changeValues = (value: string) => {
+    setSearchHero(value);
+    setErrorSearch('');
+  };
+
   const findHeroId = () => {
     if (searchHero === '') return;
     const findedHero = heroes.filter(
@@ -30,6 +35,7 @@ const SearchHeroes = ({ heroes }: Props) => {
       return;
     }
 
+    setErrorSearch('');
     router.push(`/hero/${findedHero[0].id}`);
   };
 
@@ -47,16 +53,14 @@ const SearchHeroes = ({ heroes }: Props) => {
           placeholder="Pesquisar Herói"
           className="text-zinc-900 md:flex-grow"
           value={searchHero}
-          onChange={(e) => setSearchHero(e.target.value)}
+          onChange={(e) => changeValues(e.target.value)}
           onKeyDown={(e) => handlePressFindHero(e.code)}
         />
         <Button className="bg-green-500" onClick={() => findHeroId()}>
           <IconSearch fontSize={24} />
         </Button>
       </div>
-      <p className="text-red-500">
-        {errorSearch && searchHero ? errorSearch : false}
-      </p>
+      <p className="text-red-500">{errorSearch ? errorSearch : false}</p>
     </section>
   );
 };
