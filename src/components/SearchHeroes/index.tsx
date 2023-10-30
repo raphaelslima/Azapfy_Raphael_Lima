@@ -33,6 +33,12 @@ const SearchHeroes = ({ heroes }: Props) => {
     router.push(`/hero/${findedHero[0].id}`);
   };
 
+  const handlePressFindHero = (code: string) => {
+    if (code.toLocaleLowerCase() === 'enter') {
+      findHeroId();
+    }
+  };
+
   return (
     <section className="w-full flex flex-col justify-center items-center gap-4">
       <div className="flex flex-row w-full max-w-sm items-center justify-between space-x-2">
@@ -42,6 +48,7 @@ const SearchHeroes = ({ heroes }: Props) => {
           className="text-zinc-900 md:flex-grow"
           value={searchHero}
           onChange={(e) => setSearchHero(e.target.value)}
+          onKeyDown={(e) => handlePressFindHero(e.code)}
         />
         <Button className="bg-green-500" onClick={() => findHeroId()}>
           <IconSearch fontSize={24} />
