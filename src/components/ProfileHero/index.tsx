@@ -160,7 +160,7 @@ const ProfileHero = ({ id, heroes }: Props) => {
           </div>
         </div>
       ) : (
-        <span className="text-lg">Carregando...</span>
+        false
       )}
     </div>
   );
